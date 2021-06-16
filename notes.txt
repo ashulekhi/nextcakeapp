@@ -1,0 +1,124 @@
+We all know React 
+
+What is this NExt js and why
+
+Next is framwork on the top of react js used for basically server seide rendering 
+
+
+Html rendered into client 
+
+Is there any solution using which we can render our react application using server side 
+
+---- no server side for react 
+Next provides us ssr using react 
+
+Routing 
+State
+Hooks 
+LifeCycle 
+Virtual Dom 
+COmponents 
+Redux
+Redux Saga
+Code Splitting  - LAzy loading of  components 
+
+
+Next js will help us in SSR
+
+WHy NEXT js ?
+SSR
+Inbuilt Code Splitting
+Inbuilt Routing 
+Hot Reloading - in development phase we dont need to refresh application 
+HR vs HMR  - Hot module reloading ?
+only module iin which we ar making changes  is rerendered comparitive to hot reloading 
+
+NOde version ?
+
+We need version greater than 10 
+
+
+Installation 
+
+npm install create-next-app 
+
+
+
+
+Just like we know there is a root component APp.js 
+
+ReacDOM.render
+
+_app.js
+
+When we execute localhost:3000
+
+due to this project is created by next it supports inbuilt routing 
+it looks for "/" route default
+
+page index.js
+whwne using next u open "/" it loks for index.js
+
+index.js must contain one default exported function 
+
+in react localhost:3000 renders a app component but in next js in app component in inbuilt renders a react router which looks for home component is the one which is mapped to default route 
+
+components 
+
+difference is where we are keeping that js file
+
+ones which we keep in pages folder are treated as routes 
+so for example login.js is treated as "/login" by next.js 
+
+what is flow 
+if we enter /register   - next will go to pages director and look for that name+.js file 
+if it is there default exported it will render that as component other wise it will go to universal route 
+which is page not found 404
+
+ROutes in next js are created from filename in pages directory 
+
+// ***** all pages in pages directory must contain a default export 
+
+Next js provide inbuilt moduled css 
+
+if i create a login.css and if i import in login.js will it be only limited to login.js 
+
+exactly it will be used everywhere all those classes can be accessed in jsx or in any component 
+
+
+Next supports by default styled components styling applied only to specific components 
+
+next says that mandatory u have to use  filename xyz.module.css
+
+my login.css would become login.module.css in this way it will be only restricted to login.js if we import it there
+
+by module name in that file it will treat it as moduled css 
+
+
+while rendering our project only partial css will be bundled 
+again one of the reasons for lighter weight 
+
+if we are using  styled components than moduled css is fine 
+
+global css were always creating problem 
+
+.abc 
+
+.abcsecond
+
+className = "abc abcsecond"
+
+abc at 2 places will apply styling to both the components and to add some extra styling to another component we need to make some other class and add it another component
+
+yes all the global css files will come into _app.js
+
+npm sunr dev 
+
+Login , register , Navabar , Home
+
+two ways 
+installing it locally 
+
+providing cdn 
+
+
