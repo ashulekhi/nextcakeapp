@@ -1,14 +1,14 @@
 import Link from "next/link";
-
+// import passHref from "next/passhref";
 export function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Link class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand" passHref href="/">
           Navbar
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -16,27 +16,35 @@ export function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <Link href="/login">Login</Link>
-              <Link href="/signup">Signup</Link>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link href="/login" passHref>
+                Login
+              </Link>
+              <Link href="/signup" passHref>
+                Signup
+              </Link>
+              <Link href="/cart" passHref>
+                Cart
+              </Link>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form className="form-inline my-2 my-lg-0">
             <input
-              class="form-control mr-sm-2"
+              className="form-control mr-sm-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
             <Link href="/search">
               <button
-                class="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-outline-success my-2 my-sm-0"
                 type="submit"
+                passHref
               >
                 Search
               </button>
