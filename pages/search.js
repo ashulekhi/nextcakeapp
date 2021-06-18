@@ -1,3 +1,7 @@
-export default function () {
-  return <>Search Page</>;
+export default function Search(){
+    return (
+        <>
+        Search Page 
+        </>
+    )
 }

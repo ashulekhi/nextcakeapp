@@ -121,4 +121,102 @@ installing it locally
 
 providing cdn 
 
+Problem in next js is we cant apply stylingk to Link tag if we want to provide we need to wrap an element inside that
 
+
+Pre-rendering 
+
+not to do everything in client side using js .. we will generte html at the server side 
+
+!) Static Generation 2)  Server side rendering 
+
+at the compile time html pages are generated only once that is pre rendering static Generation
+
+but eveytime when we genrate html pages that is sserver side rendering 
+
+Next js allows us to do both 
+
+export a async function getStaticprops 
+
+this function is going to generate html page at server side before compliing it and reutrn a props object to page 
+
+Pre rendering was creation of page at server level not at client side 
+
+static - only at compile time - 
+()
+each ebery time u make a request  - getServerSideProps() 
+
+
+when we wan to use different configurstions for development vs production
+
+.env.production
+.env.development 
+
+but if u provide .env.local it will override the configuration provded in both so it will simply ignore other and take variables from .env.local
+
+change in env required a restart 
+
+href belongs to <a> tag in native html
+
+next js says it is mandatory to pass passHref  in any custom tag if u are using href
+
+Static gen was complie time only
+but problem in development compilation is done on every page load again and again
+
+compliling 
+compiled esuccessfully everytime we look for a page at dev server 
+
+
+data fetching -- we have to decide wether we wan to fetch data before page creation or after that 
+
+we will use normal react concepts 
+
+if we want to fetch data before pre-rendering  of the page/view
+
+we are going to fetch data in staticProps or serversideprops()
+
+and return that data into props of that page/component 
+
+Am i audible ?
+
+As per Nextjs doc Static generation is recommeded 
+
+requirement where we ant to pre fetch the data 
+
+static
+everytime 
+
+there will be scenarios where we have no chice other than creating server side pages
+
+getSTtaicProps is related to creaton of pages 
+
+when we use function as tag it is not creating a page it is creating a component 
+
+because it is not creating a page getSTaticprops never gets called and props are undefined an map of undefines error comes 
+
+when we go /Home a page creation begins home is created as page not a component so that 
+getStaticProps is called
+
+auto optimization resizing serving imags into modern formats like WEBP 
+
+devicdSizes :[640 , 750 , 828 ,1200 ..]
+
+nextbjs by defaultlazy loads images from any cdn or from anywhere 
+
+<Image src="/image1.jpg" />
+import carosel1 from "../public/carousel.jpg"
+
+it clearly says if you import the image we will provide height width on our own , you dont need to provide seperatly 
+
+<Image ?
+Next js caching 
+
+<distDir/cache/images>
+
+upstream sever  Cace-COntrol 
+
+s-maxage  by default time is 60 seconds 
+
+Routing 
+
+<Link  href="/" />

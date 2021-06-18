@@ -1,16 +1,16 @@
-export default function Cart(props) {
-  return (
-    <>
-      <h1>{props.name}'s cart page</h1>
-    </>
-  );
-}
+export default function Cart(props){
+    return (
+        <>
+            {props.name}  Cart page 
+        </>
+    )}
 
-export async function getStaticProps() {
-  console.log("server side! alert() won't work!", process.env);
-  return {
-    props: {
-      name: "will",
-    },
-  };
-}
+
+    // export async function getStaticProps(){
+    //     console.log(">>>>>>>>>>>>>>>>>>> running at server" , process.env.BASE_URL)
+    //     return {
+    //         props:{
+    //             name:"Ashu Lekhi"
+    //         }
+    //     }
+    // }
