@@ -220,3 +220,36 @@ s-maxage  by default time is 60 seconds
 Routing 
 
 <Link  href="/" />
+
+var params = useParams()
+
+/allcakes
+
+/register method:post body :{name,email,password}
+
+/login  method post body :{email,password}
+
+/cake/cakeid -prerendering
+
+NEXT_PUBLIC_API_BASE_URL
+
+getStaticProps
+
+getServerSideProps
+
+// getStaticPaths  --  dynamics paths 
+[params].js 
+What all params are allowed / what all paths are allowed in this sqaure braces
+/cakes/1
+/cakes/abc
+
+if we want prerendering for only few paths 
+[/abc and /xyz]
+
+getStaticPath(){
+    return {
+        paths:[],
+        fallback : false
+    }
+}
+paths in line 250 are the paths for which page can be pre rendered , all other paths which are not mentioned n that array will result into 404 not found 

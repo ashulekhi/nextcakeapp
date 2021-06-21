@@ -1,5 +1,7 @@
 import styles from "./login.module.css";
 import axios from "axios";
+import router, { useRouter } from "next/router";
+
 export default function Login() {
   // // api
   // let login = ()=>{
@@ -14,6 +16,9 @@ export default function Login() {
     }).then(
       (response) => {
         console.log("response from login api", response);
+        if (response.data.token) {
+          router.push("/");
+        }
       },
       (error) => {
         console.log("error from login api", error);
