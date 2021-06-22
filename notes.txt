@@ -253,3 +253,24 @@ getStaticPath(){
     }
 }
 paths in line 250 are the paths for which page can be pre rendered , all other paths which are not mentioned n that array will result into 404 not found 
+
+================
+
+cake details page - add button 
+
+
+authtoken is coming from login response
+
+when making next requests, authtoken must be in headers 
+
+
+url - /addcaketocart method -post , requestobj - {name:"cakename" , cakeid,price,weight,image} , headers:{authtoken}
+
+new page to view cart 
+
+/cakecart method-post requestObj:{} 
+
+
+headers:{authtoken}
+
+http://localhost:3000/cakes/1623737599363
